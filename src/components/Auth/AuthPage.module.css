@@ -1,0 +1,71 @@
+.signup {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black; /* Add black background */
+  color: white; /* Set text color to white */
+  border-radius: 15px;
+}
+.signup button:hover {
+  cursor: pointer;
+}
+.form {
+  align-items: center;
+
+  width: 250px;
+  display: flex;
+
+  padding: 30px;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: black; /* Add black background */
+  border-radius: 15px; /* Add rounded corners */
+}
+.form h1 {
+  font-weight: 500;
+}
+
+.form input {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+
+  width: 250px;
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.textFields {
+}
+.signupContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.signupButton {
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  padding: 10px 15px;
+}
+
+.loginButton {
+  margin: 10px;
+  width: 280px;
+  padding: 10px 15px;
+  background-color: black; /* Add black background */
+  border: none;
+  border-radius: 15px; /* Add rounded corners */
+  color: white; /* Set text color to white */
+  cursor: pointer;
+}
