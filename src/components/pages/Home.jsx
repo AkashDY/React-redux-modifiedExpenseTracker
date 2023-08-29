@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { activeActions } from "../../store/active";
 import DarkModeSwitch from "../DarkModeSwitch";
 import { CSVLink } from "react-csv";
+
+
 function Home() {
   const navigate = useNavigate();
   const totalAmount = useSelector((state) => state.expenses.totalAmount);
@@ -14,7 +16,9 @@ function Home() {
   const expenseData = useSelector((state) => state.expenses.items);
   const isDarkTheme = useSelector((state) => state.active.darkMode);
   const dispatch = useDispatch();
+  
   console.log("isDark", isDarkTheme);
+
   function logoutHandler() {
     navigate("/");
     localStorage.clear();
@@ -47,7 +51,8 @@ function Home() {
         <button onClick={logoutHandler}>Logout</button>
         {isActive && <DarkModeSwitch />}
         <div className={Classes.profileClickContainer}>
-          <p>Your profile is incomplete.</p>
+          <p>Complete your profile? </p>
+          
 
           <NavLink to="/profile">
             <p className={Classes.link}>Complete Now</p>

@@ -12,8 +12,8 @@ function ShowForm(props) {
   const [editData, setEditData] = useState("");
   const url =
     // "https://expense-tracker-69a2b-default-rtdb.asia-southeast1.firebasedatabase.app";
-    "https://expensetracker-d6e25-default-rtdb.firebaseio.com";
-    const email = localStorage.getItem("email").replace(/[@.]/g, "");
+    "https://expensetracker-d8f76-default-rtdb.firebaseio.com/";
+  const email = localStorage.getItem("email").replace(/[@.]/g, "");
   //for showing data on screen
   const getData = async () => {
     const res = await axios.get(`${url}/${email}/expenses.json`);

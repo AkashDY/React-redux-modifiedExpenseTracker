@@ -78,7 +78,7 @@ const AuthPage = () => {
           <input type="text" ref={emailRef} placeholder="Email" required />
 
           <input
-            type="text"
+            type="password"
             ref={passwordRef}
             placeholder="password"
             required

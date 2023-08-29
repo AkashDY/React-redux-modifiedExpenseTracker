@@ -15,7 +15,7 @@ function AddExpense(props) {
   async function submitHandler(e) {
     e.preventDefault();
     // const url = `https://expense-tracker-69a2b-default-rtdb.asia-southeast1.firebasedatabase.app/${email}/expenses.json`;
-    const url = `https://expensetracker-d6e25-default-rtdb.firebaseio.com/${email}/expenses.json`;
+    const url = `https://expensetracker-d8f76-default-rtdb.firebaseio.com//${email}/expenses.json`;
     const item = {
       expenseTitle: titleRef.current.value,
       expenseCategory: categoryRef.current.value,

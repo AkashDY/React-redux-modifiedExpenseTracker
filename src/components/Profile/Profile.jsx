@@ -3,12 +3,14 @@ import Classes from "./Profile.module.css";
 import { AiFillGithub } from "react-icons/ai";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+
 function Profile() {
   const nameRef = useRef();
   const profileRef = useRef();
   const verifyEmail = useRef();
   const [isVerified, setIsVerified] = useState(false);
   const navigation = useNavigate();
+
   // this function will fetch userData and pre field data to the input fields
   const getProfileData = useCallback(async () => {
     const res = await fetch(
