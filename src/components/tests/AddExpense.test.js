@@ -1,26 +1,29 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import AddExpense from '../pages/AddExpense';
+import { render, screen } from "@testing-library/react";
+import AddExpense from "../pages/AddExpense";
+import userEvent from "@testing-library/user-event";
 
-test('renders AddExpense component', () => {
-  render(<AddExpense />);
-  
-  const addButton = screen.getByText('Add Expense');
-  expect(addButton).toBeInTheDocument();
-});
+describe("AddExpense component", () => {
+  test("renders Expense Title label", () => {
+    render(<AddExpense />);
+    const expenseTitleLabel = screen.getByText("Expense Title");
+    expect(expenseTitleLabel).toBeInTheDocument();
+  });
 
-test('submitting the form', () => {
-  render(<AddExpense />);
-  
-  const titleInput = screen.getByPlaceholderText('Enter Expense Title');
-  const categoryInput = screen.getByPlaceholderText('Enter Category');
-  const priceInput = screen.getByPlaceholderText('Enter Price');
-  const addButton = screen.getByText('Add Expense');
+  test("renders Category label", () => {
+    render(<AddExpense />);
+    const categoryLabel = screen.getByText("Category");
+    expect(categoryLabel).toBeInTheDocument();
+  });
 
-  fireEvent.change(titleInput, { target: { value: 'Test Title' } });
-  fireEvent.change(categoryInput, { target: { value: 'Test Category' } });
-  fireEvent.change(priceInput, { target: { value: '100' } });
-  fireEvent.click(addButton);
+  test("renders Price label", () => {
+    render(<AddExpense />);
+    const priceLabel = screen.getByText("Price");
+    expect(priceLabel).toBeInTheDocument();
+  });
 
-  // Add your assertions here based on the expected behavior after form submission
+  test("renders Add Expense button", () => {
+    render(<AddExpense />);
+    const addExpenseButton = screen.getByRole("button", { name: "Add Expense" });
+    expect(addExpenseButton).toBeInTheDocument();
+  });
 });

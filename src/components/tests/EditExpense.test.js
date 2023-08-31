@@ -1,26 +1,35 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import EditExpense from '../pages/EditExpense';
+import { render, screen } from "@testing-library/react";
+import EditExpense from "../pages/EditExpense";
+import userEvent from "@testing-library/user-event";
 
-test('renders EditExpense component', () => {
-  render(<EditExpense editData={{}} cancel={() => {}} />);
-  
-  const updateButton = screen.getByText('Update');
-  expect(updateButton).toBeInTheDocument();
-});
+describe("EditExpense component", () => {
+  test("renders Expense Title label", () => {
+    render(<EditExpense />);
+    const expenseTitleLabel = screen.getByText("Expense Title");
+    expect(expenseTitleLabel).toBeInTheDocument();
+  });
 
-test('editing the form', () => {
-  render(<EditExpense editData={{}} cancel={() => {}} />);
-  
-  const titleInput = screen.getByPlaceholderText('Enter Expense Title');
-  const categoryInput = screen.getByPlaceholderText('Enter Category');
-  const priceInput = screen.getByPlaceholderText('Enter Price');
-  const updateButton = screen.getByText('Update');
+  test("renders Category label", () => {
+    render(<EditExpense />);
+    const categoryLabel = screen.getByText("Category");
+    expect(categoryLabel).toBeInTheDocument();
+  });
 
-  fireEvent.change(titleInput, { target: { value: 'New Test Title' } });
-  fireEvent.change(categoryInput, { target: { value: 'New Test Category' } });
-  fireEvent.change(priceInput, { target: { value: '200' } });
-  fireEvent.click(updateButton);
+  test("renders Price label", () => {
+    render(<EditExpense />);
+    const priceLabel = screen.getByText("Price");
+    expect(priceLabel).toBeInTheDocument();
+  });
 
-  // Add your assertions here based on the expected behavior after form submission
+  test("renders Update button", () => {
+    render(<EditExpense />);
+    const updateButton = screen.getByRole("button", { name: "Update" });
+    expect(updateButton).toBeInTheDocument();
+  });
+
+  test("renders Cancel button", () => {
+    render(<EditExpense />);
+    const cancelButton = screen.getByRole("button", { name: "Cancel" });
+    expect(cancelButton).toBeInTheDocument();
+  });
 });
