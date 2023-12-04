@@ -6,7 +6,7 @@ function ForgotPassword() {
   const navigate = useNavigate();
   async function submitHendler() {
     const res = await fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCU5htJbsi7PPgASZ7_N5MjWr0esR_8l-Y",
+      "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyBhn_GzqSRPQArdZb4yjN-m8gOxy0NEMNQ",
       {
         method: "POST",
         body: JSON.stringify({
