@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import classes from "./AddForm.module.css";
-// import axios from "axios";
+import axios from "axios";
 import { expensesActions } from "../../store/expense";
 import { useDispatch } from "react-redux";
 
@@ -15,7 +15,7 @@ function AddExpense(props) {
   async function submitHandler(e) {
     e.preventDefault();
     // const url = `https://expense-tracker-69a2b-default-rtdb.asia-southeast1.firebasedatabase.app/${email}/expenses.json`;
-    const url = `https://expensetracker-d8f76-default-rtdb.firebaseio.com//${email}/expenses.json`;
+    const url = `https://expense-tracker-app-23a2c-default-rtdb.firebaseio.com/&{email}/expenses.json`;
     const item = {
       expenseTitle: titleRef.current.value,
       expenseCategory: categoryRef.current.value,
