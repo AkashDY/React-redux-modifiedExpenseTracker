@@ -11,7 +11,7 @@ function EditExpense(props) {
   const priceRef = useRef();
   const url =
     // "https://expense-tracker-69a2b-default-rtdb.asia-southeast1.firebasedatabase.app";
-    "https://expensetracker-d8f76-default-rtdb.firebaseio.com";
+    "https://expense-tracker-app-23a2c-default-rtdb.firebaseio.com/&{email}/expenses.json";
     const email = localStorage.getItem("email").replace(/[@.]/g, "");
 
   async function editHandler(e) {
