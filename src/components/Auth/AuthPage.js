@@ -37,7 +37,7 @@ const AuthPage = () => {
     let apiUrl;
     if (isSignupScreen && password === confirmPasswordRef.current.value) {
       apiUrl =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCU5htJbsi7PPgASZ7_N5MjWr0esR_8l-Y";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBhn_GzqSRPQArdZb4yjN-m8gOxy0NEMNQ";
     } else if (
       isSignupScreen &&
       password !== confirmPasswordRef.current.value
@@ -45,7 +45,7 @@ const AuthPage = () => {
       setError("password and Confirm Password not matching");
     } else {
       apiUrl =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCU5htJbsi7PPgASZ7_N5MjWr0esR_8l-Y";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBhn_GzqSRPQArdZb4yjN-m8gOxy0NEMNQ";
     }
     console.log(apiUrl);
     const response = await fetch(apiUrl, {
