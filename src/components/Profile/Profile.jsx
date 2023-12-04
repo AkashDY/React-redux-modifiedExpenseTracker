@@ -14,7 +14,7 @@ function Profile() {
   // this function will fetch userData and pre field data to the input fields
   const getProfileData = useCallback(async () => {
     const res = await fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyCU5htJbsi7PPgASZ7_N5MjWr0esR_8l-Y",
+      "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyBhn_GzqSRPQArdZb4yjN-m8gOxy0NEMNQ",
       {
         method: "POST",
         headers: {
@@ -44,7 +44,7 @@ function Profile() {
     const token = localStorage.getItem("token");
     if (name && profile) {
       const response = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCU5htJbsi7PPgASZ7_N5MjWr0esR_8l-Y",
+        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBhn_GzqSRPQArdZb4yjN-m8gOxy0NEMNQ",
         {
           method: "POST",
           headers: {
@@ -65,7 +65,7 @@ function Profile() {
   //this function  will verify email
   async function verifyHandler() {
     const res = await fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCU5htJbsi7PPgASZ7_N5MjWr0esR_8l-Y",
+      "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyBhn_GzqSRPQArdZb4yjN-m8gOxy0NEMNQ",
       {
         method: "POST",
         body: JSON.stringify({
