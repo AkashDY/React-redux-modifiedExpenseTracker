@@ -12,7 +12,7 @@ function ShowForm(props) {
   const [editData, setEditData] = useState("");
   const url =
     // "https://expense-tracker-69a2b-default-rtdb.asia-southeast1.firebasedatabase.app";
-    "https://expense-tracker-app-23a2c-default-rtdb.firebaseio.com/&{email}/expenses.json";
+    "https://expense-tracker-app-23a2c-default-rtdb.firebaseio.com";
   const email = localStorage.getItem("email").replace(/[@.]/g, "");
   //for showing data on screen
   const getData = async () => {
